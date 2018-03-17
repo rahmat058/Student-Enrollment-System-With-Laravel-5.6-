@@ -21,3 +21,4 @@ Route::get('/backend', function () {
 
 //Admin Login Routes
 Route::post('/adminlogin', 'AdminController@loginDashboard');
+Route::get('/adminDashboard', 'AdminController@adminDashboard');

@@ -35,16 +35,6 @@
     </ul>
     <div class="tab-content" id="setting-content">
       <div class="tab-pane fade show active" id="layouts-section" role="tabpanel" aria-labelledby="layouts-tab">
-        <div class="color-tiles">
-          <div class="tiles primary" id="primary-theme"></div>
-          <div class="tiles success" id="success-theme"></div>
-          <div class="tiles warning" id="warning-theme"></div>
-          <div class="tiles danger" id="danger-theme"></div>
-          <div class="tiles pink" id="pink-theme"></div>
-          <div class="tiles info" id="info-theme"></div>
-          <div class="tiles dark" id="dark-theme"></div>
-          <div class="tiles light" id="light-theme"></div>
-        </div>
         <div class="dropdown">
           <button class="btn btn-secondary dropdown-toggle btn-block mb-4" type="button" id="sidebar-color" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Sidebar Mode
