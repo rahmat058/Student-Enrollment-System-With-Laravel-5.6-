@@ -18,3 +18,6 @@ Route::get('/', function () {
 Route::get('/backend', function () {
     return view('admin.admin_login');
 });
+
+//Admin Login Routes
+Route::post('/adminlogin', 'AdminController@loginDashboard');
