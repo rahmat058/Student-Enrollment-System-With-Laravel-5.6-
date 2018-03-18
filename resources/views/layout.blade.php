@@ -33,80 +33,6 @@
         <a class="nav-link" id="close-button" href="#"><i class="mdi mdi-window-close"></i></a>
       </li>
     </ul>
-    <div class="tab-content" id="setting-content">
-      <div class="tab-pane fade show active" id="layouts-section" role="tabpanel" aria-labelledby="layouts-tab">
-        <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle btn-block mb-4" type="button" id="sidebar-color" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Sidebar Mode
-          </button>
-          <div class="dropdown-menu" aria-labelledby="sidebar-color">
-            <a class="dropdown-item" href="#" id="side-theme-light">Light</a>
-            <a class="dropdown-item" href="#" id="side-theme-dark">Dark</a>
-          </div>
-        </div>
-        <div class="dropdown d-none d-md-block">
-          <button class="btn btn-secondary dropdown-toggle btn-block" type="button" id="Layouts-type" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Layouts
-          </button>
-          <div class="dropdown-menu" aria-labelledby="Layouts-type">
-            <a class="dropdown-item" href="#" id="boxed-layout-view">Boxed</a>
-            <a class="dropdown-item" href="#" id="compact-layout-view">Compact menu</a>
-            <a class="dropdown-item" href="#" id="icon-only-layout-view">Icon Menu</a>
-            <a class="dropdown-item" href="#" id="rtl-layout-view">RTL</a>
-            <a class="dropdown-item" href="#" id="hidden-menu-1-layout-view">Hidden Menu 1</a>
-            <a class="dropdown-item" href="#" id="hidden-menu-2-layout-view">Hidden Menu 2</a>
-          </div>
-        </div>
-      </div>
-      <!-- layout section tabends -->
-      <div class="tab-pane fade" id="chats-section" role="tabpanel" aria-labelledby="chats-tab">
-        <ul class="chat-list">
-          <li class="list active">
-            <div class="profile"><img src="http://via.placeholder.com/47x47" alt=""><span class="online"></span></div>
-            <div class="info">
-              <p>Thomas Douglas</p>
-              <p>Available</p>
-            </div>
-          </li>
-          <li class="list">
-            <div class="profile"><img src="http://via.placeholder.com/47x47" alt=""><span class="online"></span></div>
-            <div class="info">
-              <p>Thomas Douglas</p>
-              <p>Available</p>
-            </div>
-          </li>
-          <li class="list">
-            <div class="profile"><img src="http://via.placeholder.com/47x47" alt=""></div>
-            <div class="info">
-              <p>Thomas Douglas</p>
-              <p>Available</p>
-            </div>
-          </li>
-          <li class="list">
-            <div class="profile"><img src="http://via.placeholder.com/47x47" alt=""><span class="ofline"></span></div>
-            <div class="info">
-              <p>Thomas Douglas</p>
-              <p>Available</p>
-            </div>
-          </li>
-          <li class="list">
-            <div class="profile"><img src="http://via.placeholder.com/47x47" alt=""><span class="online"></span></div>
-            <div class="info">
-              <p>Thomas Douglas</p>
-              <p>Available</p>
-            </div>
-          </li>
-          <li class="list">
-            <div class="profile"><img src="http://via.placeholder.com/47x47" alt=""></div>
-            <div class="info">
-              <p>Thomas Douglas</p>
-              <p>Available</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <!-- chat section tabends -->
-    </div>
   </div>
   <!-- partial -->
   <div class="container-scroller">
@@ -160,7 +86,7 @@
                   <p class="Sende-name">Setting</p>
                 </div>
               </a>
-              <a class="dropdown-item" href="#">
+              <a class="dropdown-item" href="{{URL::to('/logout')}}">
                 <div class="sender-img">
                   <img src="http://via.placeholder.com/47x47" alt="">
                 </div>
@@ -186,7 +112,7 @@
               <img src="http://via.placeholder.com/47x47" alt="">
             </div>
             <div class="details">
-              <p class="user-name">Dave Mattew</p>
+              <p class="user-name">Kazi Rahamatullah</p>
               <p class="designation">Developer</p>
             </div>
           </div>
@@ -196,13 +122,13 @@
               <span class="nav-link">Main</span>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="index.html">
+              <a class="nav-link" href="{{URL::to('/allstudent')}}">
                 <i class="mdi mdi-gauge menu-icon"></i>
                 <span class="menu-title">All Student</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="pages/widgets.html">
+              <a class="nav-link" href="{{URL::to('/addstudent')}}">
                 <i class="mdi mdi-puzzle menu-icon"></i>
                 <span class="menu-title">Add Student</span>
                 <span class="badge badge-danger badge-pill ml-auto">New</span>
@@ -217,10 +143,10 @@
               <div class="collapse" id="layoutsSubmenu">
                 <ul class="nav flex-column sub-menu">
                   <li class="nav-item">
-                    <a class="nav-link" href="pages/layout/boxed-layout.html">Tution Fees</a>
+                    <a class="nav-link" href="{{URL::to('/tutionfee')}}">Tution Fees</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="pages/layout/rtl-layout.html">Result</a>
+                    <a class="nav-link" href="{{URL::to('/result')}}">Result</a>
                   </li>
                 </ul>
               </div>
@@ -234,19 +160,19 @@
               <div class="collapse" id="sidebar_layouts">
                 <ul class="nav flex-column sub-menu">
                   <li class="nav-item">
-                    <a class="nav-link" href="pages/layout/compact-menu.html">CSE</a>
+                    <a class="nav-link" href="{{URL::to('/cse')}}">CSE</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="pages/layout/sidebar-collapsed.html">EEE</a>
+                    <a class="nav-link" href="{{URL::to('/eee')}}">EEE</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="pages/layout/sidebar-hidden.html">BBA</a>
+                    <a class="nav-link" href="{{URL::to('/bba')}}">BBA</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="pages/layout/sidebar-hidden-overlay.html">ECE</a>
+                    <a class="nav-link" href="{{URL::to('/ece')}}">ECE</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="pages/layout/sidebar-fixed.html">MBA</a>
+                    <a class="nav-link" href="{{URL::to('/mba')}}">MBA</a>
                   </li>
                 </ul>
               </div>

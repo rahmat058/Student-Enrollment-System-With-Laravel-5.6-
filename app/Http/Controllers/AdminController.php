@@ -8,11 +8,22 @@ use DB;
 use Illuminate\Support\Facades\Redirect;
 use Session;
 
-session_start();
+Session_start();
 
 class AdminController extends Controller
 {
-    //loginDashboard start Here
+
+    //Logout Function Start here
+    public function logout(){
+        Session::put('admin_name', null);
+        Session::put('admin_id', null);
+
+        return Redirect::to('/backend');
+    }
+
+
+
+    //loginDashboard For Admin start Here
     public function loginDashboard(Request $request) {
 
       $email    = $request-> admin_email;
@@ -21,10 +32,6 @@ class AdminController extends Controller
                 ->where('admin_email', $email)
                 ->where('admin_password', $password)
                 ->first();
-
-                // echo "</pre>";
-                // print_r($result);
-
 
       if($result) {
 

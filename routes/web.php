@@ -11,6 +11,11 @@
 |
 */
 
+
+//logout Routes
+Route::get('/logout', 'AdminController@logout');
+
+
 Route::get('/', function () {
     return view('student_login');
 });
