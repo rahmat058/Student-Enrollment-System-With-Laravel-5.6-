@@ -49,4 +49,14 @@ class AdminController extends Controller
     public function adminDashboard() {
       return view('admin.dashboard');
     }
+
+    //View Profile part here
+    public function viewProfile(){
+        return view('admin.view');
+    }
+
+    //Setting part here
+    public function setting(){
+        return view('admin.setting');
+    }
 }

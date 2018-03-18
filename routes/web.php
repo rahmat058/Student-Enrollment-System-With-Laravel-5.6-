@@ -27,6 +27,8 @@ Route::get('/backend', function () {
 //Admin Login Routes
 Route::post('/adminlogin', 'AdminController@loginDashboard');
 Route::get('/adminDashboard', 'AdminController@adminDashboard');
+Route::get('/viewprofile', 'AdminController@viewProfile');
+Route::get('/setting', 'AdminController@setting');
 
 //Admin add student Routes
 Route::get('/addstudent', 'AddstudentsController@addStudents');
