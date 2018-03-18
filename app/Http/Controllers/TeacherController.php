@@ -6,5 +6,7 @@ use Illuminate\Http\Request;
 
 class TeacherController extends Controller
 {
-    //
+  public function teacher(){
+      return view('admin.teacher');
+  }
 }

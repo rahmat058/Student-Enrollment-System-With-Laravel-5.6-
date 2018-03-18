@@ -28,5 +28,24 @@ Route::get('/backend', function () {
 Route::post('/adminlogin', 'AdminController@loginDashboard');
 Route::get('/adminDashboard', 'AdminController@adminDashboard');
 
-//Admin add student
+//Admin add student Routes
 Route::get('/addstudent', 'AddstudentsController@addStudents');
+
+//Admin all student Routes
+Route::get('/allstudent', 'AllstudentsController@allStudents');
+
+//Admin Tution Fees Routes
+Route::get('/tutionfee', 'TutionController@tution');
+
+//Admin Subject Routes
+Route::get('/cse', 'CSEController@cse');
+Route::get('/ece', 'ECEController@ece');
+Route::get('/bba', 'BBAController@bba');
+Route::get('/mba', 'MBAController@mba');
+Route::get('/eee', 'EEEController@eee');
+
+//Admin Result Routes
+Route::get('/result', 'ResultController@result');
+
+//Admin Teacher Routes
+Route::get('/allteacher', 'TeacherController@teacher');

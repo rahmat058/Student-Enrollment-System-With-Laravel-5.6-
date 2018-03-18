@@ -189,16 +189,7 @@
               <div class="collapse" id="advancedSubmenu">
                 <ul class="nav flex-column sub-menu">
                   <li class="nav-item">
-                    <a class="nav-link" href="pages/forms/form-addons.html">Form addons</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="pages/forms/form-picker.html">Form Picker</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="pages/forms/bt-select-splitter.html">Splitter</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="pages/forms/icheck.html">Icheck</a>
+                    <a class="nav-link" href="{{URL::to('/allteacher')}}">All Teacher</a>
                   </li>
                 </ul>
               </div>
