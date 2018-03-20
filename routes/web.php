@@ -32,6 +32,7 @@ Route::get('/setting', 'AdminController@setting');
 
 //Admin add student Routes
 Route::get('/addstudent', 'AddstudentsController@addStudents');
+Route::post('/savestudent', 'AddstudentsController@saveStudents');
 
 //Admin all student Routes
 Route::get('/allstudent', 'AllstudentsController@allStudents');
