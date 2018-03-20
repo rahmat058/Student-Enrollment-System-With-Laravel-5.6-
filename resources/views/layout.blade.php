@@ -247,5 +247,12 @@
   <!-- Custom js for this page-->
   <script src="{{asset('js/dashboard_1.js')}}"></script>
   <!-- End custom js for this page-->
+
+  <!-- Start Data Table Plugin -->
+  <script src="{{asset('node_modules/datatables.net/js/jquery.dataTables.js')}}"></script>
+  <script src="{{asset('node_modules/datatables.net-bs4/js/dataTables.bootstrap4.js')}}"></script>
+  <script src="{{asset('js/data-table.js')}}"></script>
+  <!-- End Data Table Plugin -->
+
 </body>
 </html>
