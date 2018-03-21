@@ -43,7 +43,7 @@
                   <td>
                     <button class="btn btn-outline-primary">View</button>
                     <button class="btn btn-outline-warning">Edit</button>
-                    <button class="btn btn-outline-danger">Delete</button>
+                    <a href="{{URL::to('/studentdelete/'.$all_student->student_id)}}" id="delete"><button class="btn btn-outline-danger">Delete</button></a>
                   </td>
               </tr>
               @endforeach
