@@ -36,7 +36,7 @@ class AddstudentsController extends Controller
         $image_name = str_random(20);
         $ext = strtolower($image->getClientOriginalExtension());
         $image_full_name = $image_name.'.'.$ext;
-        $upload_path = '/image';
+        $upload_path = 'image/';
         $image_url = $upload_path.$image_full_name;
         $success = $image->move($upload_path, $image_full_name);
         if($success) {
