@@ -37,7 +37,7 @@ Route::post('/savestudent', 'AddstudentsController@saveStudents');
 
 //Admin all student Routes
 Route::get('/allstudent', 'AllstudentsController@allStudents');
-Route::get('/studentview', 'AllstudentsController@viewStudents');
+Route::get('/studentview/{student_id}', 'AllstudentsController@viewStudents');
 Route::get('/studentdelete/{student_id}', 'AllstudentsController@deleteStudents');
 
 
