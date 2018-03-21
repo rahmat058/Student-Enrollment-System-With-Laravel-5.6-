@@ -11,6 +11,7 @@ Session_start();
 
 class AllstudentsController extends Controller
 {
+  // Students Show Method Are Here
   public function allStudents() {
     $allstudent_info = DB::table('student_tbl')
                       -> get();
@@ -22,11 +23,17 @@ class AllstudentsController extends Controller
                 -> with('allstudent', $manage_student);
   }
 
+  // Students Delete Method Are Here
   public function deleteStudents($student_id) {
     DB::table('student_tbl')
              -> where ('student_id', $student_id)
              -> delete();
 
        return Redirect::to('allstudent');
+  }
+
+  // Students Information View Method Are Here
+  public function viewStudents() {
+     return view('admin.studentview');
   }
 }

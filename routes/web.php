@@ -34,11 +34,12 @@ Route::get('/setting', 'AdminController@setting');
 Route::get('/addstudent', 'AddstudentsController@addStudents');
 Route::post('/savestudent', 'AddstudentsController@saveStudents');
 
-//Admin delete student Routes
-Route::get('/studentdelete/{student_id}', 'AllstudentsController@deleteStudents');
 
 //Admin all student Routes
 Route::get('/allstudent', 'AllstudentsController@allStudents');
+Route::get('/studentview', 'AllstudentsController@viewStudents');
+Route::get('/studentdelete/{student_id}', 'AllstudentsController@deleteStudents');
+
 
 //Admin Tution Fees Routes
 Route::get('/tutionfee', 'TutionController@tution');
