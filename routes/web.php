@@ -39,6 +39,8 @@ Route::post('/savestudent', 'AddstudentsController@saveStudents');
 Route::get('/allstudent', 'AllstudentsController@allStudents');
 Route::get('/studentview/{student_id}', 'AllstudentsController@viewStudents');
 Route::get('/studentdelete/{student_id}', 'AllstudentsController@deleteStudents');
+Route::get('/studentedit/{student_id}', 'AllstudentsController@editStudents');
+
 
 
 //Admin Tution Fees Routes

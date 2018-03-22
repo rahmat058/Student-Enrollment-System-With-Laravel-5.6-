@@ -7,7 +7,7 @@
                 2=>'ECE',
                 3=>'BBA',
                 4=>'EEE',
-                5=>'MBA',
+                5=>'MBA'
            ];
 
            return $values[$value];
@@ -23,7 +23,8 @@
           <h2 class="card-title">Info</h2>
           <img src="{{URL::to($allStudentsDescriptionView->student_image)}}" alt="">
           <p class="name">{{$allStudentsDescriptionView->student_name}}</p>
-          <p class="designation">{{$allStudentsDescriptionView->student_roll}}</p>
+          <p class="designation">    -{{convert_department($allStudentsDescriptionView->student_department)}}-
+          </p>
           <a class="email" href="#">{{$allStudentsDescriptionView->student_email}}</a>
           <a class="number" href="#">{{$allStudentsDescriptionView->student_phone}}</a>
         </div>
@@ -31,9 +32,7 @@
       <div class="card mb-6">
         <div class="card-body overview">
           <ul class="achivements">
-            <li><p>34</p><p>Projects</p></li>
-            <li><p>23</p><p>Task</p></li>
-            <li><p>29</p><p>Completed</p></li>
+            <h2 style="color:maroon; font-family:cursive; font-weight:bolder">Student Profile</h2>
           </ul>
           <div class="wrapper about-user">
             <h2 class="card-title mt-4 mb-3">About</h2>
@@ -59,9 +58,9 @@
               </span>
             </a>
             <a class="website">
-              <i class="icon-globe icon" style="font-family: verdana; font-size: 17px;">Student Department: </i>
+              <i class="icon-globe icon" style="font-family: verdana; font-size: 17px;">Student Roll: </i>
               <span style="font-family: verdana; font-size: 15px;">
-                {{$allStudentsDescriptionView->student_department}}
+                {{$allStudentsDescriptionView->student_roll}}
               </span>
             </a>
             <a class="website">

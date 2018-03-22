@@ -41,9 +41,15 @@
                       @endif
                   </td>
                   <td>
-                    <a href="{{URL::to('/studentview/'.$all_student->student_id)}}"><button class="btn btn-outline-primary">View</button> </a>
-                    <button class="btn btn-outline-warning">Edit</button>
-                    <a href="{{URL::to('/studentdelete/'.$all_student->student_id)}}" id="delete"><button class="btn btn-outline-danger">Delete</button></a>
+                    <a href="{{URL::to('/studentview/'.$all_student->student_id)}}">
+                      <button class="btn btn-outline-primary">View</button>
+                    </a>
+                    <a href="{{URL::to('/studentedit/'.$all_student->student_id)}}">
+                      <button class="btn btn-outline-warning">Edit</button>
+                    </a>
+                    <a href="{{URL::to('/studentdelete/'.$all_student->student_id)}}" id="delete">
+                      <button class="btn btn-outline-danger">Delete</button>
+                    </a>
                   </td>
               </tr>
               @endforeach
