@@ -4,6 +4,16 @@
   <div class="card">
     <div class="card-body">
       <h2 class="card-title">All Student</h2>
+      <p class="alert-success">
+        <?php
+            $message = Session::get('message');
+
+            if($message) {
+              echo "$message";
+              Session::put('message', null);
+            }
+        ?>
+      </p>
       <div class="row">
         <div class="col-12">
           <table id="order-listing" class="table table-striped" style="width:100%;">
