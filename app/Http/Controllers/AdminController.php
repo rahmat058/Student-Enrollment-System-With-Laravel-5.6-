@@ -62,27 +62,27 @@ class AdminController extends Controller
 
 
     //loginDashboard For Student start Here
-    // public function loginDashboard(Request $request) {
-    //
-    //   $email    = $request-> student_email;
-    //   $password = md5($request-> student_password);
-    //   $result   = DB::table('student_tbl')
-    //             ->where('student_email', $email)
-    //             ->where('student_password', $password)
-    //             ->first();
-    //
-    //   if($result) {
-    //
-    //      Session::put('student_email', $result->student_email);
-    //      Session::put('student_id', $result->student_id);
-    //      return Redirect::to('/adminDashboard');
-    //
-    //   }else {
-    //      Session::put('exception', 'Email or Password is Invalid!!');
-    //      return Redirect::to('/backend');
-    //
-    //   }
-    // }
+    public function studentLoginDashboard(Request $request) {
+
+      $email    = $request-> student_email;
+      $password = md5($request-> student_password);
+      $result   = DB::table('student_tbl')
+                ->where('student_email', $email)
+                ->where('student_password', $password)
+                ->first();
+
+      if($result) {
+
+         Session::put('student_email', $result->student_email);
+         Session::put('student_id', $result->student_id);
+         return Redirect::to('/studentDashboard');
+
+      }else {
+         Session::put('exception', 'Email or Password is Invalid!!');
+         return Redirect::to('/');
+
+      }
+    }
 
     public function studentDashboard() {
       return view('student.dashboard');
