@@ -70,3 +70,4 @@ Route::post('/studentlogin', 'AdminController@studentLoginDashboard');
 Route::get('/studentDashboard', 'AdminController@studentDashboard');
 Route::get('/student_profile', 'AddstudentsController@studentProfile');
 Route::get('/student_setting', 'AdminController@studentSetting');
+Route::post('/student_own_update', 'AllstudentsController@studentOwnUpdate');

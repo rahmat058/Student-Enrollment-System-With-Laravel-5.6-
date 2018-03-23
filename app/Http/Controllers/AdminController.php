@@ -97,6 +97,20 @@ class AdminController extends Controller
 
     //Student Setting Method are here
     public function studentSetting() {
-        return view('student.student_setting');
+      $student_id = Session::get('student_id');
+      $allStudentsEditView = DB::table('student_tbl')
+                                     -> select('*')
+                                     -> where('student_id', $student_id)
+                                     -> first();
+
+        //  Debugging Code
+        // echo "<pre>";
+        // print_r($allStudentsEditView);
+
+      $manageEditStudent = view('student.student_setting')
+                      -> with('allStudentsEditView',$allStudentsEditView);
+
+        return view('student_layout')
+                        ->with('student_setting',$manageEditStudent);
     }
 }

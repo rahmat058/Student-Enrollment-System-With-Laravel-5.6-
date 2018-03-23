@@ -90,4 +90,21 @@ class AllstudentsController extends Controller
     Session::put('message', "Student Update Successfully!!");
     return Redirect::to('/allstudent');
   }
+
+
+  //Students Update Profile Method Are Here
+  public function studentOwnUpdate(Request $request) {
+     $student_id = Session::get('student_id');
+     $data= array();
+     $data['student_phone']          = $request->student_phone;
+     $data['student_address']        = $request->student_address;
+     $data['student_password']       = $request->student_password;
+
+     DB::table('student_tbl')
+           -> where('student_id', $student_id)
+           -> update($data);
+
+    Session::put('message', "Student Update Successfully!!");
+    return Redirect::to('/student_setting');
+  }
 }
