@@ -5,6 +5,11 @@
   <div class="card">
     <div class="card-body">
       <h2 class="card-title">All Students</h2>
+      @php
+        $student = DB::table('student_tbl')
+                   -> count('student_id');
+      @endphp
+      <p style="font-family: cursive; font-size: 20px; color: maroon; font-weight: bold">{{$student}}</p>
     </div>
     <div class="dashboard-chart-card-container">
       <div id="dashboard-card-chart-1" class="card-float-chart"></div>
@@ -15,6 +20,11 @@
   <div class="card">
     <div class="card-body">
       <h2 class="card-title">All Teacher</h2>
+      @php
+        $teacher = DB::table('teachers_tbl')
+                   -> count('teachers_id');
+      @endphp
+      <p style="font-family: cursive; font-size: 20px; color: maroon; font-weight: bold">{{$teacher}}</p>
     </div>
     <div class="dashboard-chart-card-container">
       <div id="dashboard-card-chart-2" class="card-float-chart"></div>
@@ -25,6 +35,7 @@
   <div class="card">
     <div class="card-body">
       <h2 class="card-title">Tution Fees</h2>
+      <p style="font-family: cursive; font-size: 18px; color: maroon; font-weight: bold">Monthly: 30000 tk</p>
     </div>
     <div class="dashboard-chart-card-container">
       <div id="dashboard-card-chart-3" class="card-float-chart"></div>
@@ -35,6 +46,7 @@
   <div class="card">
     <div class="card-body">
       <h2 class="card-title">Revenue</h2>
+      <p style="font-family: cursive; font-size: 18px; color: maroon; font-weight: bold">Yearly: 100000 tk</p>
     </div>
     <div class="dashboard-chart-card-container">
       <div id="dashboard-card-chart-4" class="card-float-chart"></div>
