@@ -76,7 +76,7 @@
                         <option value="5">MBA</option>
                     </select>
                 </div>
-                <button type="submit" class="btn btn-success btn-block">Submit</button>
+                <button type="submit" class="btn btn-success btn-block">Add Student</button>
             </form>
         </div>
     </div>
