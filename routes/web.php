@@ -58,6 +58,7 @@ Route::get('/eee', 'EEEController@eee');
 Route::get('/result', 'ResultController@result');
 
 //Admin Teacher Routes
-Route::get('/allteacher', 'TeacherController@teacher');
+Route::get('/allteacher', 'TeacherController@allTeacher');
 Route::get('/addteacher', 'TeacherController@addTeacher');
 Route::post('/saveteacher', 'TeacherController@saveTeacher');
+Route::get('/teacherdelete/{teachers_id}', 'TeacherController@deleteTeacher');

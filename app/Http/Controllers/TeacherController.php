@@ -13,14 +13,24 @@ Session_start();
 
 class TeacherController extends Controller
 {
-  public function teacher(){
-      return view('admin.teacher');
+  //All Teacher Show Method Are Here
+  public function allTeacher(){
+    $allteacher_info = DB::table('teachers_tbl')
+                      -> get();
+
+    $manage_teacher = view('admin.allteacher')
+                      -> with ('allteacher_info', $allteacher_info);
+
+    return view('layout')
+                -> with('allteacher', $manage_teacher);
   }
 
+  //Add Teacher Function Are Here
   public function addTeacher() {
     return view('admin.addteacher');
   }
 
+  //Save Teacher Function Are Here
   public function saveTeacher(Request $request) {
     $data = array();
     $data['teachers_name']           = $request->teachers_name;
@@ -56,4 +66,12 @@ class TeacherController extends Controller
       return Redirect::to('/addteacher');
   }
 
+  //Delete Teacher Method Are Here
+  public function deleteTeacher($teachers_id) {
+    DB::table('teachers_tbl')
+             -> where ('teachers_id', $teachers_id)
+             -> delete();
+
+       return Redirect::to('allteacher');
+  }
 }
