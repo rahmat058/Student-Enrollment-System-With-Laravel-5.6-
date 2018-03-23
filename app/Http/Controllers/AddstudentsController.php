@@ -17,6 +17,7 @@ class AddstudentsController extends Controller
       return view('admin.addstudent');
     }
 
+    //Student Save Method are Here
     public function saveStudents(Request $request) {
       $data = array();
       $data['student_name']           = $request->student_name;
@@ -56,5 +57,24 @@ class AddstudentsController extends Controller
         DB::table('student_tbl')-> insert($data);
         Session::put('exception', 'Student Added SuccessFully!!');
         return Redirect::to('/addstudent');
+    }
+
+    //Student Setting Method are Here
+    public function studentProfile() {
+      $student_id      = Session::get('student_id');
+      $student_profile = DB::table('student_tbl')
+                                     -> select('*')
+                                     -> where('student_id', $student_id)
+                                     -> first();
+
+        //  Debugging Code
+        // echo "<pre>";
+        // print_r($student_profile);
+
+      $manageStudentProfile = view('student.student_view')
+                      -> with('student_profile',$student_profile);
+
+      return view('student_layout')
+                      ->with('student_view',$manageStudentProfile);
     }
 }

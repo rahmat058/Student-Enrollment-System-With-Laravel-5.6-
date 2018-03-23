@@ -67,3 +67,4 @@ Route::get('/teacherdelete/{teachers_id}', 'TeacherController@deleteTeacher');
 //Student Login Routes
 Route::post('/studentlogin', 'AdminController@studentLoginDashboard');
 Route::get('/studentDashboard', 'AdminController@studentDashboard');
+Route::get('/student_profile', 'AddstudentsController@studentProfile');
