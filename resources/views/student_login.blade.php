@@ -15,7 +15,7 @@
   <!-- inject:css -->
   <link rel="stylesheet" href="{{asset('css/style.css')}}">
   <!-- endinject -->
-  <link rel="shortcut icon" href="{{asset('images/favicon.html')}}" />
+  <link rel="shortcut icon" href="{{URL::to('images/favicon.html')}}" />
 </head>
 
 <body class="sidebar-dark">
@@ -26,14 +26,29 @@
           <div class="card col-lg-4 mx-auto">
             <div class="card-body px-5 py-5">
               <h3 class="card-title text-left mb-3">Login</h3>
-              <form>
+
+              <p class="alert-danger">
+                <?php
+                    $exception = Session::get('exception');
+
+                    if($exception) {
+                      echo "$exception";
+                      Session::put('exception', null);
+                    }
+                ?>
+              </p>
+
+              <form method="post" action="{{ url('/studentlogin') }}">
+
+                {{ csrf_field() }}
+
                 <div class="form-group">
                   <label>Username or email *</label>
-                  <input type="text" class="form-control p_input">
+                  <input type="text" class="form-control p_input" name="student_email" placeholder="Email is required">
                 </div>
                 <div class="form-group">
                   <label>Password *</label>
-                  <input type="text" class="form-control p_input">
+                  <input type="password" class="form-control p_input" name="student_password" placeholder="Password is required">
                 </div>
                 <div class="form-group d-flex align-items-center justify-content-between">
                   <div class="icheck-square">
@@ -51,6 +66,7 @@
                 </div>
                 <small class="text-center d-block">Don't have an Account?<a href="#"> Sign Up</a></small>
               </form>
+
             </div>
           </div>
         </div>

@@ -62,3 +62,7 @@ Route::get('/allteacher', 'TeacherController@allTeacher');
 Route::get('/addteacher', 'TeacherController@addTeacher');
 Route::post('/saveteacher', 'TeacherController@saveTeacher');
 Route::get('/teacherdelete/{teachers_id}', 'TeacherController@deleteTeacher');
+
+
+//Student Login Routes
+Route::post('/studentlogin', 'AdminController@studentDashboard');

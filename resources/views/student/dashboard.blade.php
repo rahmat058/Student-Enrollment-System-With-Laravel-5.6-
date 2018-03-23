@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('student_layout')
 @section('content')
 
 <div class="col-sm-6 col-md-3 grid-margin">
@@ -53,28 +53,6 @@
     </div>
   </div>
 </div>
-</div>
-
-
-<div class="col-6 grid-margin d-flex align-items-stretch">
-  <div class="row">
-    <div class="col-8 col-sm-6 col-md-12 mb-3">
-      <div class="social-panel bg-facebook">
-        <p class="mb-0">Computer Science Engineering</p></div>
-    </div>
-    <div class="col-6 col-sm-6 col-md-12 mb-3">
-      <div class="social-panel bg-twitter"></i><p class="mb-0">ECE</p></div>
-    </div>
-    <div class="col-6 col-sm-6 col-md-12 mb-3">
-      <div class="social-panel bg-google"></i><p class="mb-0">BBA</p></div>
-    </div>
-    <div class="col-6 col-sm-6 col-md-12">
-      <div class="social-panel bg-linkedin" style="margin-bottom: 14px"><p class="mb-0">EEE</p></div>
-    </div>
-    <div class="col-6 col-sm-6 col-md-12">
-      <div class="social-panel bg-facebook"><p class="mb-0">MBA</p></div>
-    </div>
-  </div>
 </div>
 
 @endsection
