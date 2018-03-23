@@ -17,7 +17,7 @@
               ?>
             </p>
 
-            <form class="forms-sample" method="post" action="{{URL::to('/savestudent')}}" enctype="multipart/form-data">
+            <form class="forms-sample" method="post" action="{{URL::to('/saveteacher')}}" enctype="multipart/form-data">
 
               {{csrf_field()}}
 
