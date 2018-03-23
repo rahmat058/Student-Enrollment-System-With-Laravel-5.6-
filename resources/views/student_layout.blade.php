@@ -1,3 +1,13 @@
+@php
+
+$student_id      = Session::get('student_id');
+$student_profile = DB::table('student_tbl')
+                               -> select('*')
+                               -> where('student_id', $student_id)
+                               -> first();
+
+@endphp
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -75,10 +85,10 @@
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
           <div class="user-info">
             <div class="profile">
-              <img src="http://via.placeholder.com/47x47" alt="">
+              <img src="{{URL::to($student_profile->student_image)}}" alt="">
             </div>
             <div class="details">
-              <p class="user-name">Kazi Rahamatullah</p>
+              <p class="user-name">{{strtoupper($student_profile->student_name)}}</p>
               <p class="designation">Developer</p>
             </div>
           </div>

@@ -21,6 +21,13 @@ class AdminController extends Controller
         return Redirect::to('/backend');
     }
 
+    public function student_logout() {
+      Session::put('student_name', null);
+      Session::put('student_id', null);
+
+      return Redirect::to('/');
+    }
+
 
 
     //loginDashboard For Admin start Here
@@ -86,5 +93,10 @@ class AdminController extends Controller
 
     public function studentDashboard() {
       return view('student.dashboard');
+    }
+
+    //Student Setting Method are here
+    public function studentSetting() {
+        return view('student.student_setting');
     }
 }

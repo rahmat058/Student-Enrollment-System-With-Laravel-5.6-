@@ -14,6 +14,7 @@
 
 //logout Routes
 Route::get('/logout', 'AdminController@logout');
+Route::get('/student_logout', 'AdminController@student_logout');
 
 
 Route::get('/', function () {
@@ -68,3 +69,4 @@ Route::get('/teacherdelete/{teachers_id}', 'TeacherController@deleteTeacher');
 Route::post('/studentlogin', 'AdminController@studentLoginDashboard');
 Route::get('/studentDashboard', 'AdminController@studentDashboard');
 Route::get('/student_profile', 'AddstudentsController@studentProfile');
+Route::get('/student_setting', 'AdminController@studentSetting');
